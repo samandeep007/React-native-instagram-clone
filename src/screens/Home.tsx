@@ -3,22 +3,24 @@ import React from 'react'
 
 import { NativeStackScreenProps } from '@react-navigation/native-stack'
 import { RootStackParamList } from '../App'
-import { ScreenStack } from 'react-native-screens';
+
 
 type HomeProps = NativeStackScreenProps<RootStackParamList, 'Home'>;
 
 
 
-export default function Home({navigation}: HomeProps) {
+export default function Home({ navigation }: HomeProps) {
     return (
+
+
         <ScrollView contentContainerStyle={{ flex: 1 }}>
             <View style={styles.container}>
-                <View style={{flexDirection: "row", gap: 1}}>
-                    
-                         <Pressable style={styles.product} onPress={() => Alert.alert("Hello", "Your story is not available right now")}>
+                <View style={{ flexDirection: "row", gap: 1 }}>
+
+                    <Pressable style={styles.product} onPress={() => Alert.alert("Hello", "Your story is not available right now")}>
                         <Text style={styles.productTitle}>M</Text>
                     </Pressable>
-                    
+
                     <ScrollView horizontal={true}>
                         <View style={styles.productSection}>
                             <Pressable style={styles.product} onPress={() => Alert.alert("Hello", "The story is not available right now")}>
@@ -44,15 +46,16 @@ export default function Home({navigation}: HomeProps) {
                     <Text style={styles.bannerTitle}>Amazing Discounts. Avail Today!!</Text>
                     <Text style={styles.bannerDescription}>Hurry Up!! Offers are valid for limited time only</Text>
                 </View>
-                <Pressable style={styles.button} onPress={() => navigation.navigate('Details', {"productId": "12"})}>
+                <Pressable style={styles.button} onPress={() => navigation.navigate('Details', { "productId": "12" })}>
                     <Text style={styles.buttonText}>Go to product page</Text>
                 </Pressable>
-                <Pressable style={styles.button} onPress={() => navigation.push('Details', {"productId": "12"})}>
+                <Pressable style={styles.button} onPress={() => navigation.push('Details', { "productId": "12" })}>
                     <Text style={styles.buttonText}>Go to product page</Text>
                 </Pressable>
             </View>
-
+           
         </ScrollView>
+
     )
 }
 
@@ -70,7 +73,7 @@ const styles = StyleSheet.create({
         gap: 10,
         maxHeight: 200,
         paddingHorizontal: 10,
-      
+
     },
 
     product: {
