@@ -1,23 +1,22 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import { SafeAreaView } from 'react-native-safe-area-context'
+
 
 // Navigation Modules 
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+
 
 // Screens
 import Home from './screens/Home';
 import Details from './screens/Details'
-import { Screen } from 'react-native-screens'
 
 export type RootStackParamList = {
-  Home: undefined; //will expect nothing
+  Home: undefined; 
   Details: { productId: string }
 }
 
-const Stack = createNativeStackNavigator<RootStackParamList>(); //Stack Navigator
+const Stack = createNativeStackNavigator<RootStackParamList>(); 
 
 
 
