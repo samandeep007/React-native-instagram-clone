@@ -94,13 +94,14 @@ const styles = StyleSheet.create({
 
     banner: {
         flex: 1,
-        maxHeight: 140,
+        height: "auto",
         width: "100%",
         borderColor: "#CF9FFF",
         borderWidth: 2,
         borderRadius: 16,
         padding: 16,
-        gap: 10
+        gap: 10,
+        
     },
 
     bannerTitle: {
