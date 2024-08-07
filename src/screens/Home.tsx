@@ -1,7 +1,15 @@
 import { Alert, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-export default function Home() {
+import { NativeStackScreenProps } from '@react-navigation/native-stack'
+import { RootStackParamList } from '../App'
+import { ScreenStack } from 'react-native-screens';
+
+type HomeProps = NativeStackScreenProps<RootStackParamList, 'Home'>;
+
+
+
+export default function Home({navigation}: HomeProps) {
     return (
         <ScrollView contentContainerStyle={{ flex: 1 }}>
             <View style={styles.container}>
@@ -36,6 +44,12 @@ export default function Home() {
                     <Text style={styles.bannerTitle}>Amazing Discounts. Avail Today!!</Text>
                     <Text style={styles.bannerDescription}>Hurry Up!! Offers are valid for limited time only</Text>
                 </View>
+                <Pressable style={styles.button} onPress={() => navigation.navigate('Details', {"productId": "12"})}>
+                    <Text style={styles.buttonText}>Go to product page</Text>
+                </Pressable>
+                <Pressable style={styles.button} onPress={() => navigation.push('Details', {"productId": "12"})}>
+                    <Text style={styles.buttonText}>Go to product page</Text>
+                </Pressable>
             </View>
 
         </ScrollView>
@@ -96,6 +110,21 @@ const styles = StyleSheet.create({
     bannerDescription: {
         fontSize: 14,
         color: "#000000"
+    },
+
+    button: {
+        backgroundColor: 'purple',
+        borderRadius: 16,
+        paddingHorizontal: 10,
+        paddingVertical: 16,
+        justifyContent: "center",
+        alignItems: "center"
+    },
+
+    buttonText: {
+        fontSize: 16,
+        fontWeight: "600",
+        color: "white"
     }
 
 })
