@@ -26,7 +26,7 @@ export default function App() {
   return (
       <NavigationContainer>
         <Stack.Navigator initialRouteName='Home'>
-          <Stack.Screen name='Home' component={Home} options={{ title: "Trending Products" }} />
+          <Stack.Screen name='Home' component={Home} options={{ title: "Trending Products", headerStyle: {backgroundColor: "black"}, headerTitleStyle: {color: "#fff", fontSize: 20, fontWeight: "600" } }} />
           <Stack.Screen name='Details' component={Details} options={{ title: "Product Details" }} />
         </Stack.Navigator>
 

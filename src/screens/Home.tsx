@@ -62,7 +62,7 @@ export default function Home({ navigation }: HomeProps) {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#fff',
+        backgroundColor: '#000',
         padding: 16,
         gap: 16
     },
@@ -79,8 +79,8 @@ const styles = StyleSheet.create({
     product: {
         width: 90,
         height: 90,
-        backgroundColor: "white",
-        borderColor: "purple",
+        backgroundColor: "#131313",
+        borderColor: "#CF9FFF",
         borderWidth: 4,
         borderRadius: 90 / 2,
         justifyContent: "center",
@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
     },
 
     productTitle: {
-        color: "#000000",
+        color: "white",
         fontSize: 28
     },
 
@@ -96,7 +96,7 @@ const styles = StyleSheet.create({
         flex: 1,
         maxHeight: 140,
         width: "100%",
-        borderColor: "gray",
+        borderColor: "#CF9FFF",
         borderWidth: 2,
         borderRadius: 16,
         padding: 16,
@@ -105,14 +105,14 @@ const styles = StyleSheet.create({
 
     bannerTitle: {
         fontSize: 23,
-        color: "#000000",
+        color: "#ffffff",
         fontWeight: "600",
 
     },
 
     bannerDescription: {
         fontSize: 14,
-        color: "#000000"
+        color: "#ffffff",
     },
 
     button: {

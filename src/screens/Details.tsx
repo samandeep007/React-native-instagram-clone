@@ -1,10 +1,10 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-export default function Details() {
+export default function Details({productId}: any) {
   return (
     <View>
-      <Text>Details</Text>
+      <Text style={styles.smallText}>{productId}</Text>
     </View>
   )
 }
